@@ -1,0 +1,18 @@
+def calculate_electricity_bill(units):
+    rate_per_unit = 5
+    bill_amount = units * rate_per_unit
+    return bill_amount
+
+def main():
+    try:
+        units = float(input("Enter the number of units consumed: "))
+        if units < 0:
+            print("Units consumed cannot be negative.")
+            return
+        bill = calculate_electricity_bill(units)
+        print(f"Electricity bill amount: ₹{bill:.2f}")
+    except ValueError:
+        print("Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()
